@@ -10,7 +10,7 @@ public class DataCollectorUseCase {
 
     private final CollectorProcessorExecutor executor;
 
-    public void execute() {
-        executor.run(CollectorType.JOB_KOREA);
+    public void execute(CollectorType type) {
+        executor.run(type);
     }
 }
