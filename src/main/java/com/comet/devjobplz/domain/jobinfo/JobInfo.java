@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(indexes = {@Index(name = "jobInfo_index",columnList = "jobId")})
+@Table(indexes = {@Index(name = "jobInfo_index", columnList = "jobId")})
 public class JobInfo {
 
     @Id
@@ -23,6 +23,8 @@ public class JobInfo {
     private Long jobId;
 
     private String title;
+
+    private String requestedGrade;
 
     private Integer minCareer;
 
