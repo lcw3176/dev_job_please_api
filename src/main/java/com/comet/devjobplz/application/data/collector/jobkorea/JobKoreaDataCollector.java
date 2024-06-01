@@ -35,9 +35,4 @@ public class JobKoreaDataCollector implements DataCollector {
         executor.afterEnd(CollectorType.JOB_KOREA.name());
     }
 
-    @Override
-    public CollectResult getResult() {
-        return null;
-    }
-
 }

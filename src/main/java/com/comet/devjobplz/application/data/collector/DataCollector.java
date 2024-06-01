@@ -7,6 +7,4 @@ public interface DataCollector {
     void process();
 
     void end();
-
-    CollectResult getResult();
 }
