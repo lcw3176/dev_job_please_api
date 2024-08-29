@@ -1,4 +1,4 @@
-package com.comet.devjobplz.domain.job;
+package com.comet.devjobplz.domain.jobs.company;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(indexes = {@Index(name = "job_index",columnList = "lat, lng")})
-public class Job {
+@Table(indexes = {@Index(name = "job_coord_index", columnList = "lat, lng")})
+public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

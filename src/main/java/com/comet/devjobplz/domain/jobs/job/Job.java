@@ -1,5 +1,6 @@
-package com.comet.devjobplz.domain.jobinfo;
+package com.comet.devjobplz.domain.jobs.job;
 
+import com.comet.devjobplz.infra.db.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,23 +14,26 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(indexes = {@Index(name = "jobInfo_index", columnList = "jobId")})
-public class JobInfo {
+@Table(indexes = {@Index(name = "job_companyId_index", columnList = "companyId")})
+public class Job extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long jobId;
+    private Long companyId;
 
     private String title;
-
-    private String requestedGrade;
 
     private Integer minCareer;
 
     private Integer maxCareer;
 
     private LocalDateTime dueDate;
+
+    private String source;
+
+    @Enumerated(EnumType.STRING)
+    private SourceType sourceType;
 
 }

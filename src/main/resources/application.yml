@@ -20,3 +20,18 @@ server:
   error:
     whitelabel:
       enabled: false
+
+jwt:
+  admin:
+    secret: 1234
+    header: ADMIN_AUTH_TOKEN
+    second: 3600
+
+  image:
+    secret: 1234
+    header: AUTH_TOKEN
+    second: 60
+
+client:
+  slack:
+    url: testhello

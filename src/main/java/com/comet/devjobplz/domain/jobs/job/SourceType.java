@@ -1,4 +1,4 @@
-package com.comet.devjobplz.domain.joblink;
+package com.comet.devjobplz.domain.jobs.job;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
