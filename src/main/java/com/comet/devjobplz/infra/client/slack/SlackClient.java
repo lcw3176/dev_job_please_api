@@ -1,6 +1,7 @@
 package com.comet.devjobplz.infra.client.slack;
 
 
+import com.comet.devjobplz.infra.client.ApiHandler;
 import com.comet.devjobplz.infra.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -58,12 +59,12 @@ public class SlackClient {
     private void sendSlackMessage(SlackMessage exception) {
         String message = SlackMessageFormatter.makeExceptionMessage(exception);
 
-        slackRestClient.post()
+        ApiHandler.handle(() -> slackRestClient.post()
                 .accept(MediaType.APPLICATION_JSON)
                 .acceptCharset(StandardCharsets.UTF_8)
                 .body(message)
                 .retrieve()
-                .body(String.class);
+                .body(String.class));
     }
 
 
