@@ -1,4 +1,4 @@
-package com.comet.devjobplz.domain.jobs.company;
+package com.comet.devjobplz.domain.company;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

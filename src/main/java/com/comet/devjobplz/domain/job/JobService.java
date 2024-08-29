@@ -1,4 +1,4 @@
-package com.comet.devjobplz.domain.jobs.company;
+package com.comet.devjobplz.domain.job;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -7,9 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class CompanyService {
+public class JobService {
 
-    private final CompanyRepository companyRepository;
+    private final JobRepository jobRepository;
 
-    
+
 }
